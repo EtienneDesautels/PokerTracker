@@ -8,7 +8,7 @@ TOURNAMENT_FOLDER = (
 
 PLAYER_NAME = "Dérouxo"
 
-BANKROLL_START = 189.11
+BANKROLL_START = 203.56
 
 
 # Date à partir de laquelle les résultats doivent modifier
