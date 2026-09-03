@@ -47,5 +47,10 @@ class SessionService:
         return session_id
 
     @staticmethod
-    def _parse_date(date_text: str) -> datetime:
+    def _parse_date(date_text: str | None) -> datetime:
+        if not isinstance(date_text, str) or not date_text.strip():
+            raise ValueError(
+                "Date absente ou invalide pour la session"
+            )
+
         return datetime.fromisoformat(date_text)

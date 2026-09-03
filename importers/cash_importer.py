@@ -104,6 +104,13 @@ class CashImporter:
             )
 
             if parsed_hand is not None:
+                if not parsed_hand.get("date"):
+                    print(
+                        "Entrée ignorée, car sa date est absente : "
+                        f"{parsed_hand.get('hand_id', 'inconnue')}"
+                    )
+                    continue
+
                 hand_id = parsed_hand["hand_id"]
 
                 if not self.database.cash_hand_exists(hand_id):
